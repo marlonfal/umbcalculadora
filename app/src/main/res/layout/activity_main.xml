@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,50 +10,192 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="224dp"
-        android:layout_height="222dp"
-        android:layout_marginStart="93dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginRight="54dp"
-        android:layout_marginBottom="304dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_height="291dp"
+        android:contentDescription="logo"
         app:srcCompat="@drawable/logoumb" />
 
-    <Button
-        android:id="@+id/btnSumar"
+    <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/sumar" />
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_span="4"
 
-    <Button
-        android:id="@+id/btnRestar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="310dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/restar" />
+            android:textSize="25dp"
+            android:text="0"
+            android:layout_gravity="right"
+            />
+    </TableRow>
 
-    <Button
-        android:id="@+id/btnMultiplicar"
+    <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/multiplicar" />
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
 
-    <Button
-        android:id="@+id/btnDividir"
+        <Button
+            android:id="@+id/btnSiete"
+            android:background="@drawable/custom_buttom"
+            android:text="7"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnOcho"
+            android:background="@drawable/custom_buttom"
+            android:text="8"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnNueve"
+            android:background="@drawable/custom_buttom"
+            android:text="9"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnDividir"
+            android:background="@drawable/custom_buttom"
+            android:text="/"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="410dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/dividir" />
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnCuatro"
+            android:background="@drawable/custom_buttom"
+            android:text="4"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnCinco"
+            android:background="@drawable/custom_buttom"
+            android:text="5"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnSeis"
+            android:background="@drawable/custom_buttom"
+            android:text="6"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnMultiplicar"
+            android:background="@drawable/custom_buttom"
+            android:text="*"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnUno"
+            android:background="@drawable/custom_buttom"
+            android:text="1"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnDos"
+            android:background="@drawable/custom_buttom"
+            android:text="2"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnTres"
+            android:background="@drawable/custom_buttom"
+            android:text="3"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnSumar"
+            android:background="@drawable/custom_buttom"
+            android:text="+"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnCero"
+            android:background="@drawable/custom_buttom"
+            android:text="0"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnBorrar"
+            android:background="@drawable/custom_buttom"
+            android:text="C"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnIgual"
+            android:background="@drawable/igual_button"
+            android:text="="
+            android:layout_marginRight="6dp"
+            android:textColor="#FFF"
+            android:textSize="23sp" />
+
+        <Button
+            android:id="@+id/btnRestar"
+            android:background="@drawable/custom_buttom"
+            android:text="-"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+    </TableRow>
+
+</TableLayout>
