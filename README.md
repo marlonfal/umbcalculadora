@@ -1,1 +1,5 @@
-# Calculadora en Android para la Actividad 5: Desarrollo de 2 APPs: una Grupal y otra Individual de Programación en Plataformas Móviles I
+# Calculadora en Android para la Actividad 5
+Integrantes:
+Marlon Fabián Adarme López
+Julian Posada
+Hamilton Vasquez
