@@ -87,9 +87,98 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtResultado = findViewById(R.id.txtResultado);
     }
 
+
     @Override
     public void onClick(View v)
     {
+        switch (v.getId())
+        {
+            case R.id.btnCero:
+                txtAOperar.append("0");
+                break;
+            case R.id.btnUno:
+                txtAOperar.append("1");
+                break;
+            case R.id.btnDos:
+                txtAOperar.append("2");
+                break;
+            case R.id.btnTres:
+                txtAOperar.append("3");
+                break;
+            case R.id.btnCuatro:
+                txtAOperar.append("4");
+                break;
+            case R.id.btnCinco:
+                txtAOperar.append("5");
+                break;
+            case R.id.btnSeis:
+                txtAOperar.append("6");
+                break;
+            case R.id.btnSiete:
+                txtAOperar.append("7");
+                break;
+            case R.id.btnOcho:
+                txtAOperar.append("8");
+                break;
+            case R.id.btnNueve:
+                txtAOperar.append("9");
+                break;
+            case R.id.btnBorrar:
+                txtAOperar.setText("");
+                txtResultado.setText("");
+                operando1 = 0;
+                operando2 = 0;
+                resultado = 0;
+                break;
+            case R.id.btnSumar:
+                operar("+");
+                break;
+            case R.id.btnRestar:
+                operar("-");
+                break;
+            case R.id.btnDividir:
+                operar("/");
+                break;
+            case R.id.btnMultiplicar:
+                operar("*");
+                break;
+            case R.id.btnIgual:
+                operar("=");
+                break;
 
+        }
+    }
+
+    public void operar(String operacion) {
+        resultado = operando1;
+        String aOperar = txtAOperar.getText().toString();
+        try {
+            if (!aOperar.isEmpty()) {
+                operando2 = Integer.parseInt(aOperar);
+                if (operacionPrevia == "+") resultado += operando2;
+                if (operacionPrevia == "-") resultado -= operando2;
+                if (operacionPrevia == "/") {
+                    if (operando2 != 0) {
+                        resultado /= operando2;
+                    } else {
+                        Toast.makeText(this, "No se puede dividir por cero", Toast.LENGTH_LONG).show();
+                    }
+                }
+                if (operacionPrevia == "*") resultado *= operando2;
+                operando1 = resultado;
+                operacionPrevia = operacion;
+                if (operacion == "=") {
+                    txtAOperar.setText("" + resultado);
+                    txtResultado.setText("" + resultado);
+                } else {
+                    txtAOperar.setText("");
+                    txtResultado.setText("" + resultado + " " +  operacionPrevia);
+                }
+            } else {
+                Toast.makeText(this, "Seleccione un número para operar", Toast.LENGTH_LONG).show();
+            }
+        } catch (NumberFormatException ex) {
+            Toast.makeText(this, "Ocurrió un error al calcular el resultado", Toast.LENGTH_LONG).show();
+        }
     }
 }
